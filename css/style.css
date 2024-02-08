@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", Arial, sans-serif;
+}
+
+.img-bg {
+  margin: 1rem;
+  height: 50vh;
+  background: linear-gradient(360deg, #36856f, transparent),
+    url("../img/img-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 50px;
+  position: relative;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-bg {
+    position: absolute;
+    /* background-color: rebeccapurple; */
+    height: 80vh;
+    width: 70vw;
+}
+
+.items{
+    /* background-color: red; */
+    width: 100%;
+    height: 10%;
+
+    /* to align contents inside */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 2rem; */
+}
+
+.btn-parent{
+    margin-left: 2rem;
+}
+
+.btn-parent > button{
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 0.4rem 1rem;
+    background-color: #367BF5;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.titlet{
+    margin-right: 2rem;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+/* list contents */
+.todolist{
+    background-color: white;
+    width: 100%;
+    height: 90%;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.tdl-element{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    background-color: white;
+    display: flex;
+    box-shadow: 0px 0px 10px 2px grey;
+}
+
+.tdl-text{
+    display: flex;
+    width: 90%;
+    /* background-color: wheat; */
+    flex-direction: column;
+}
+
+.tdl-title{
+    width: 60%;
+}
+.tdl-desc{
+    width: 60%;
+}
+
+.tdl-icon{
+    /* background-color: rebeccapurple; */
+    width: 10%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.priority{
+    display: flex;
+    background-color: blue;
+    width: 3rem;
+    font-weight: bold;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.temp{
+    display: flex;
+}
