@@ -20,6 +20,7 @@ save.addEventListener("click", () => {
     text: ovltext.value,
     desc: ovldesc.value,
     priority: ovlsel.value,
+    id: Date.now(),
   };
 
   console.log(newdata); //works fine
@@ -34,8 +35,14 @@ save.addEventListener("click", () => {
 
   overlay.classList.add("d-none"); //remove popup
   writetodo();
+  toastersuccess("To Do Added Successfully")
+  ovltext.value = " ";
+  ovldesc.value = " ";
+  ovlsel.value = " ";
 });
+
 let pri = null;
+
 function writetodo() {
   let tododata = localStorage.getItem("data");
   tododata = JSON.parse(tododata);
@@ -57,11 +64,33 @@ function writetodo() {
             <p class="tdl-desc">${value.desc}</p>
         </div>
         <div class="tdl-icon">
-            <button type="button"><i class="fa fa-trash" aria-hidden="true"></i>
+            <button type="button" id="del-btn" data-id="${value.id}"><i class="fa fa-trash" aria-hidden="true"></i>
             </button>
         </div>
     </div>`;
   });
   dataw = dataw.join(" ");
   card.innerHTML = dataw;
+  delelement();
 }
+
+//for deleting elements
+function delelement() {
+    let deletebtn = document.querySelectorAll("#del-btn");
+  
+    deletebtn.forEach((value) => {  
+      value.addEventListener("click", () => {
+
+        let id = value.dataset.id;
+  
+        let newtodo = JSON.parse(localStorage.getItem("data"));
+        newtodo = newtodo.filter((temp) => {
+          return temp.id != id;
+        });
+        localStorage.setItem("data", JSON.stringify(newtodo));
+        toastersuccess("ToDo Item Deleted Successfully");
+        writetodo();
+      });
+    });
+  }
+  
