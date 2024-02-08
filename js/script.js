@@ -2,6 +2,7 @@
 let todo = document.querySelector("#addtodo");
 let overlay = document.querySelector("#overlay-t");
 let save = document.querySelector("#save");
+let back = document.querySelector("#back")
 
 //for overlay input
 let ovltext = document.querySelector("#ovl-text");
@@ -12,9 +13,14 @@ let ovlsel = document.querySelector("#ovl-sel");
 let card = document.querySelector(".todolist");
 
 todo.addEventListener("click", () => {
-  console.log(todo);
+  
   overlay.classList.remove("d-none");
 });
+back.addEventListener("click", () => {
+  
+  overlay.classList.add("d-none");
+});
+
 save.addEventListener("click", () => {
   let newdata = {
     text: ovltext.value,
