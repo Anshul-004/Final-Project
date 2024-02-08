@@ -3,7 +3,9 @@
   box-sizing: border-box;
   font-family: "Montserrat Alternates", Arial, sans-serif;
 }
-
+body{
+    overflow: hidden;
+}
 .img-bg {
   margin: 1rem;
   height: 50vh;
@@ -78,8 +80,8 @@
 }
 
 .tdl-element {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  /* margin-top: 0.5rem;
+  margin-bottom: 1rem; */
   padding: 1.5rem;
   background-color: white;
   display: flex;
@@ -101,18 +103,21 @@
   width: 80%;
 }
 
-.tdl-icon {
-  width: 10%;
+.tdl-icon > button{
+  /* width: 10%; */
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: red;
+  background-color: white;
+  outline: none;
+  border: none;
 }
 
 .priority {
   display: flex;
-  background-color: blue;
+  /* background-color: blue; */
   height: 1.5rem;
   width: 3rem;
   font-weight: bold;
@@ -139,7 +144,7 @@
   background-color: rgba(0, 0, 0, 0.521);
   justify-content: center;
   align-items: center;
-  bottom: 25rem;
+  bottom: 24rem;
 }
 
 .ovl-card {
@@ -207,7 +212,7 @@
 
 .ovl-btn > button {
   display: flex;
-  background-color: blue;
+  background-color: #367BF5;
   height: 2rem;
   width: 4rem;
   font-weight: bold;
@@ -218,6 +223,11 @@
   outline: none;
   border: none;
   margin-top: 1rem;
+}
+
+.ovl-btn > button:active{
+    background-color: white;
+    color: #367BF5;
 }
 
 .d-none {
