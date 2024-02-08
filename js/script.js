@@ -94,7 +94,7 @@ function delelement() {
           return temp.id != id;
         });
         localStorage.setItem("data", JSON.stringify(newtodo));
-        toastersuccess("ToDo Item Deleted Successfully");
+        toastersuccess("To Do Item Deleted Successfully");
         writetodo();
       });
     });
